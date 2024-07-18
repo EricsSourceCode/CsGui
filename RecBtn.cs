@@ -98,11 +98,17 @@ SolidBrush whiteBrush = new SolidBrush(
 
 Pen whitePen = new Pen( Brushes.White );
 
-Font mainFont = new Font(
-                   FontFamily.GenericSansSerif,
-                   36.0F,
-                   FontStyle.Regular, // Bold
-                   GraphicsUnit.Pixel );
+// Font mainFont = new Font(
+//                   FontFamily.GenericSansSerif,
+//                   36.0F,
+//                   FontStyle.Regular, // Bold
+//                   GraphicsUnit.Pixel );
+
+Font mainFont = new System.Drawing.Font(
+              "Consolas", 40.0F,
+              System.Drawing.FontStyle.Regular,
+              System.Drawing.GraphicsUnit.Pixel,
+              ((byte)(0)) );
 
 try
 {
@@ -125,7 +131,7 @@ useGraphics.DrawRectangle( whitePen, x, y,
 
 useGraphics.DrawString( label, mainFont,
                         whiteBrush,
-                        x + 5, y + 5 );
+                        x + 5, y + 3 );
 
 }
 finally

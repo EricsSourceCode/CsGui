@@ -40,14 +40,14 @@ mData = mDataToUse;
 democratBtn = new RecBtn( mData,
                           5, // x
                           7, // y
-                          180, // width
+                          202, // width
                           50, // height
                           "Democrat" );
 
 repubBtn = new RecBtn( mData,
-                       190, // x
+                       215, // x
                        7, // y
-                       200, // width
+                       250, // width
                        50, // height
                        "Republican" );
 
