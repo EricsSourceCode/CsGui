@@ -27,6 +27,7 @@ public class GuiMain
 private MainData mData;
 private RecBtn democratBtn;
 private RecBtn repubBtn;
+private RecBtn testBtn;
 
 
 private GuiMain()
@@ -51,6 +52,13 @@ repubBtn = new RecBtn( mData,
                        50, // height
                        "Republican" );
 
+testBtn = new RecBtn( mData,
+                          1000, // x
+                          7, // y
+                          120, // width
+                          50, // height
+                          "Test" );
+
 }
 
 
@@ -67,6 +75,14 @@ internal bool isInsideRepubBtn(
                       int mouseX, int mouseY )
 {
 return repubBtn.isInside( mouseX, mouseY );
+}
+
+
+
+internal bool isInsideTestBtn(
+                      int mouseX, int mouseY )
+{
+return testBtn.isInside( mouseX, mouseY );
 }
 
 
@@ -103,6 +119,7 @@ useGraphics.Clear( Color.Black );
 
 democratBtn.draw( useGraphics );
 repubBtn.draw( useGraphics );
+testBtn.draw( useGraphics );
 
 }
 catch( Exception ) // Except )
