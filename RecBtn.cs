@@ -105,7 +105,7 @@ Pen whitePen = new Pen( Brushes.White );
 //                   GraphicsUnit.Pixel );
 
 Font mainFont = new System.Drawing.Font(
-              "Consolas", 40.0F,
+              "Consolas", 50.0F,
               System.Drawing.FontStyle.Regular,
               System.Drawing.GraphicsUnit.Pixel,
               ((byte)(0)) );

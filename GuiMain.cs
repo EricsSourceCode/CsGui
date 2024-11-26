@@ -28,6 +28,7 @@ private MainData mData;
 private RecBtn democratBtn;
 private RecBtn repubBtn;
 private RecBtn testBtn;
+private RecBtn threeDBtn;
 
 
 private GuiMain()
@@ -41,25 +42,33 @@ mData = mDataToUse;
 democratBtn = new RecBtn( mData,
                           5, // x
                           7, // y
-                          202, // width
-                          50, // height
+                          250, // width
+                          68, // height
                           "Democrat" );
 
 repubBtn = new RecBtn( mData,
-                       215, // x
+                       262, // x
                        7, // y
-                       250, // width
-                       50, // height
+                       304, // width
+                       68, // height
                        "Republican" );
 
 testBtn = new RecBtn( mData,
-                          1000, // x
+                          1720, // x
                           7, // y
-                          120, // width
-                          50, // height
+                          144, // width
+                          68, // height
                           "Test" );
 
+threeDBtn = new RecBtn( mData,
+                          1620, // x
+                          7, // y
+                          80, // width
+                          68, // height
+                          "3D" );
+
 }
+
 
 
 internal bool isInsideDemocratBtn(
@@ -83,6 +92,13 @@ internal bool isInsideTestBtn(
                       int mouseX, int mouseY )
 {
 return testBtn.isInside( mouseX, mouseY );
+}
+
+
+internal bool isInsideThreeDBtn(
+                      int mouseX, int mouseY )
+{
+return threeDBtn.isInside( mouseX, mouseY );
 }
 
 
@@ -120,6 +136,7 @@ useGraphics.Clear( Color.Black );
 democratBtn.draw( useGraphics );
 repubBtn.draw( useGraphics );
 testBtn.draw( useGraphics );
+threeDBtn.draw( useGraphics );
 
 }
 catch( Exception ) // Except )
